@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>det</title>
+    <link rel="stylesheet" href="det.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="foot.css">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+     <!-- header -->
+     <header class="header">
+        <div class="header-content">
+            <a href="#" class="logo">ERU</a>
+            <nav class="nav">
+                <a href="index.html" class="nav-link" >Home</a>
+                <a href="det.html" class="nav-link">More Information</a>
+               
+                <a href="login.html" class="nav-link">join us</a>
+            </nav>
+            
+            <button class="mobile-menu-toggle"></button>
+        </div>
+    </header>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+      
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 40px;
+            background: linear-gradient(to right, rgba(0,0,0,0.3), rgba(0,0,0,0.5));
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+        .nav {
+            display: flex;
+            text-align: center;
+            gap: 30px;
+        }
+        .nav-link {
+            color: #fff;
+            text-decoration: none;
+            text-align: center;
+            font-size: 18px;
+            position: relative;
+            transition: 0.5s all;
+                }
+                .nav-link:hover{
+                    scale: 1.07;
+                }
+       
+        
+        @media (max-width: 768px) {
+            .nav, .cta-button {
+                display: none;
+            }
+            .mobile-menu-toggle {
+                display: block;
+            }
+            .nav.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: rgba(0,0,0,0.8);
+                padding: 20px;
+            }
+            .nav.active .nav-link {
+                padding: 10px 0;
+            }
+            .nav.active + .cta-button {
+                display: inline-block;
+                margin-top: 20px;
+            }
+        }
+        .header.scrolled {
+            padding: 10px 40px;
+            background: rgba(0,0,0,0.8);
+        }
+        .content {
+            padding: 40px;
+            height: 200vh;
+        }
+    </style>
+    <script>
+        const header = document.querySelector('.header');
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const nav = document.querySelector('.nav');
+
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        mobileMenuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
+
+
+
+
+    <!--main top start-->
+      <div class="main-top">
+        <img class="main-top-img" src="bc.jpg" alt="">
+    </div>
+    <!--main top end-->
+
+
+
+    <!--all tog start-->
+    <div class="all-tog">
+        <div class="title-box-at">
+            <div style="display: inline-block;" class="title-at"> AI DEPARTMENTS</div>
+        </div>
+
+         <div class="card-boxes-at">
+
+            <div class="bex-at">   
+                <div class="bex-text-at">Artificial Intelligence
+                    <div class="bex-btn-at">
+                    <div class="bex-btn"><a class="bex-btn-link" href="#sec1"><img class="bex-btn-icon" src="icons/ai.png" alt=""></a></div>
+                </div>
+                </div>
+            </div>
+
+            <div class="bex-at">   
+                <div class="bex-text-at">Software Engineering
+                    <div class="bex-btn-at">
+                    <div class="bex-btn"><a class="bex-btn-link" href="#sec2"><img class="bex-btn-icon" src="icons/se.png" alt=""></a></div>
+                </div>
+                </div>
+            </div>
+
+            <div class="bex-at">   
+                <div class="bex-text-at">Data scince
+                    <div class="bex-btn-at">
+                    <div class="bex-btn"><a class="bex-btn-link" href="#sec3"><img class="bex-btn-icon" src="icons/ds.png" alt=""></a></div>
+                </div>
+                </div>
+            </div>
+
+            <div class="bex-at">   
+                <div class="bex-text-at">Cyber Security
+                    <div class="bex-btn-at">
+                    <div class="bex-btn"><a class="bex-btn-link" href="#sec4"><img class="bex-btn-icon" src="icons/cs.png" alt=""></a></div>
+                </div>
+                </div>
+            </div>
+
+        </div>
+    </div>   
+    <!--all tog end-->
+
+
+
+    <!--l sec start-->
+    <div id="sec1" class="det-sec-p2">
+        <div class="det-sec-title">Artificial Intelligence :</div>
+        <div class="sec-det">
+
+            <div class="sec-det-text">
+                <div class="det-text-top">Artificial Intelligence (AI) is a revolutionary field of technology that is shaping the way we interact <br>
+                    At its core, AI involves creating systems capable of performing tasks that usually require human intelligence, such as problem-solving, decision-making, natural language understanding, and even creative tasks like art or music generation.<br>
+                    AI can be divided into two main categories: narrow AI and general AI. Narrow AI focuses on specific tasks, such as recommendation systems on Netflix or chatbots, while general AI aspires to mimic human-like intelligence across multiple domains, a concept still in the research phase.<br>
+                </div>
+
+                <div class="det-text-mid">
+                    <li><strong>Examples:</strong>  
+                        <ul>
+                          <li>AI in medical diagnosis</li>
+                          <li>Virtual assistants like Siri and Alexa</li>
+                          <li>Predictive analytics in business</li>
+                          
+                        </ul>
+                      </li>
+                    <li><strong>Technologies:</strong>  
+                        <ul>
+                          <li>Machine Learning</li>
+                          <li>Deep Learning</li>
+                        </ul>
+                      </li>
+                      <li><strong>Innovations:</strong>  
+                        <ul>
+                          <li>Facial Recognition</li>
+                          <li>Autonomous Vehicles</li>
+                          <li>Personalized Healthcare</li>
+                        </ul>
+                      </li>
+                      
+                    </ul>
+                </div>
+
+                <div class="det-text-miid">However, the rise of AI also comes with challenges and ethical concerns.<br>
+                    Issues like data privacy, algorithmic bias, and the potential loss of jobs due to automation<br>
+                    are working together to create regulations and ethical frameworks to ensure that AI benefits<br>
+                    humanity as a whole. Despite these challenges, the potential of AI to transform industries and<br>
+                    improve lives is unparalleled, making it one of the most exciting and impactful fields in modern<br>
+                </div>
+                <div class="det-text-dwn">
+                    <div class="det-bex"><a class="det-bex-link" href="#sec1"><img class="det-bex-icon" src="icons/ai.png" alt=""></a></div>
+                    <div class="det-bex"><a class="det-bex-link" href="#sec2"><img class="det-bex-icon" src="icons/se.png" alt=""></a></div>
+                    <div class="det-bex"><a class="det-bex-link" href="#sec3"><img class="det-bex-icon" src="icons/ds.png" alt=""></a></div>
+                    <div class="det-bex"><a class="det-bex-link" href="#sec4"><img class="det-bex-icon" src="icons/cs.png" alt=""></a></div>
+                </div>
+            </div>
+
+            <div class="sec-det-image">
+                <div class="img-det-box">
+                    <img class="img-det" src="det-sec-images/AI.jpg" alt="">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--l sec end-->
+
+     <!--r sec start-->
+    <div id="sec2" class="det-sec-p2">
+        <div class="det-sec-title">Software Engineering :</div>
+        <div class="sec-det">
+
+            <div class="sec-det-image">
+                <div class="img-det-box">
+                    <img class="img-det" src="det-sec-images/sw.jpg" alt="">
+                </div>
+            </div>
+            <div class="sec-det-text">
+                <div class="det-text-top">Software Engineering is a field dedicated to designing, developing, and maintaining software systems that power our digital world.<br>
+                    At its core, software engineering involves systematic approaches to problem-solving and creating reliable, efficient, and scalable software solutions.<br>
+                    Software engineering spans various methodologies, tools, and practices to ensure high-quality outcomes, emphasizing collaboration and innovation.<br>
+                </div>
+                
+                <div class="det-text-mid">
+                    <li><strong>Examples:</strong>  
+                        <ul>
+                          <li>Web and mobile application development</li>
+                          <li>Operating systems and databases</li>
+                          <li>Enterprise software systems</li>
+                        </ul>
+                      </li>
+                    <li><strong>Technologies:</strong>  
+                        <ul>
+                          <li>Version control systems</li>
+                          <li>Agile and DevOps practices</li>
+                        </ul>
+                      </li>
+                      <li><strong>Innovations:</strong>  
+                        <ul>
+                          <li>Cloud computing</li>
+                          <li>Microservices architecture</li>
+                          <li>AI-driven software development</li>
+                        </ul>
+                      </li>
+                </div>
+                
+                <div class="det-text-miid">However, software engineering also faces challenges such as technical debt, evolving user requirements, and ensuring robust security.<br>
+                    Overcoming these challenges requires continuous learning, effective communication, and adherence to best practices in design and development.<br>
+                    The potential of software engineering to drive technological advancements is immense, making it a cornerstone of the modern digital age.<br>
+                </div>
+                <div class="det-text-dwn">
+                    <div class="det-bex"><a class="det-bex-link" href="#sec1"><img class="det-bex-icon" src="icons/ai.png" alt=""></a></div>
+                    <div class="det-bex"><a class="det-bex-link" href="#sec2"><img class="det-bex-icon" src="icons/se.png" alt=""></a></div>
+                    <div class="det-bex"><a class="det-bex-link" href="#sec3"><img class="det-bex-icon" src="icons/ds.png" alt=""></a></div>
+                    <div class="det-bex"><a class="det-bex-link" href="#sec4"><img class="det-bex-icon" src="icons/cs.png" alt=""></a></div>
+                </div>
+            </div>   
+        </div>
+    </div>
+     <!--r sec start-->
+
+     <!--l sec start-->
+    <div id="sec3" class="det-sec-p2">
+        <div class="det-sec-title">Data Sceince :</div>
+        <div class="sec-det">
+
+            <div class="sec-det-text">
+                <div class="det-text-top">Data Science is a multidisciplinary field that extracts meaningful insights and knowledge from structured and unstructured data.<br>
+                    At its core, data science combines mathematics, statistics, and computer science to analyze, interpret, and visualize data.<br>
+                    Data science enables organizations to make data-driven decisions, improving efficiency, profitability, and customer satisfaction.<br>
+                </div>
+                
+                <div class="det-text-mid">
+                    <li><strong>Examples:</strong>  
+                        <ul>
+                          <li>Predictive modeling in finance</li>
+                          <li>Recommendation systems</li>
+                          <li>Customer segmentation in marketing</li>
+                        </ul>
+                      </li>
+                    <li><strong>Technologies:</strong>  
+                        <ul>
+                          <li>Big data platforms</li>
+                          <li>Data visualization tools</li>
+                        </ul>
+                      </li>
+                      <li><strong>Innovations:</strong>  
+                        <ul>
+                          <li>Real-time analytics</li>
+                          <li>Natural language processing</li>
+                          <li>AI-enhanced data exploration</li>
+                        </ul>
+                      </li>
+                </div>
+                
+                <div class="det-text-miid">Despite its potential, data science faces challenges such as data privacy concerns, bias in data interpretation, and managing massive datasets.<br>
+                    Addressing these challenges requires ethical considerations, robust data governance, and continuous advancements in technology.<br>
+                    Data science's ability to uncover actionable insights makes it a transformative force across industries and disciplines.<br>
+                </div>
+                <div class="det-text-dwn">
+                    <div class="det-bex"><a class="det-bex-link" href="#sec1"><img class="det-bex-icon" src="icons/ai.png" alt=""></a></div>
+                    <div class="det-bex"><a class="det-bex-link" href="#sec2"><img class="det-bex-icon" src="icons/se.png" alt=""></a></div>
+                    <div class="det-bex"><a class="det-bex-link" href="#sec3"><img class="det-bex-icon" src="icons/ds.png" alt=""></a></div>
+                    <div class="det-bex"><a class="det-bex-link" href="#sec4"><img class="det-bex-icon" src="icons/cs.png" alt=""></a></div>
+                </div>
+            </div>
+
+            <div class="sec-det-image">
+                <div class="img-det-box">
+                    <img class="img-det" src="det-sec-images/ds.jpg" alt="">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--l sec end-->
+
+     <!--r sec start-->
+    <div id="sec4" class="det-sec-p2">
+        <div class="det-sec-title">Cyber Security :</div>
+        <div class="sec-det">
+
+            <div class="sec-det-image">
+                <div class="img-det-box">
+                    <img class="img-det" src="det-sec-images/cs.jpg" alt="">
+                </div>
+            </div>
+            <div class="sec-det-text">
+                <div class="det-text-top">Cybersecurity focuses on protecting systems, networks, and data from malicious attacks and unauthorized access.<br>
+                    At its core, cybersecurity involves safeguarding sensitive information and ensuring the integrity, confidentiality, and availability of digital assets.<br>
+                    With the growing reliance on technology, cybersecurity has become a critical field for businesses, governments, and individuals.<br>
+                </div>
+                
+                <div class="det-text-mid">
+                    <li><strong>Examples:</strong>  
+                        <ul>
+                          <li>Penetration testing</li>
+                          <li>Network security monitoring</li>
+                          <li>Incident response and forensics</li>
+                        </ul>
+                      </li>
+                    <li><strong>Technologies:</strong>  
+                        <ul>
+                          <li>Firewalls and intrusion detection systems</li>
+                          <li>Encryption protocols</li>
+                        </ul>
+                      </li>
+                      <li><strong>Innovations:</strong>  
+                        <ul>
+                          <li>AI-driven threat detection</li>
+                          <li>Zero trust security models</li>
+                          <li>Blockchain-based security solutions</li>
+                        </ul>
+                      </li>
+                </div>
+                
+                <div class="det-text-miid">Cybersecurity also presents challenges, including staying ahead of sophisticated cyber threats, ensuring compliance with regulations, and maintaining user trust.<br>
+                    Tackling these challenges requires ongoing vigilance, advanced tools, and fostering a culture of security awareness.<br>
+                    The importance of cybersecurity in protecting our digital future cannot be overstated, as it underpins every aspect of modern technology.<br>
+                </div>
+                <div class="det-text-dwn">
+                    <div class="det-bex"><a class="det-bex-link" href="#sec1"><img class="det-bex-icon" src="icons/ai.png" alt=""></a></div>
+                    <div class="det-bex"><a class="det-bex-link" href="#sec2"><img class="det-bex-icon" src="icons/se.png" alt=""></a></div>
+                    <div class="det-bex"><a class="det-bex-link" href="#sec3"><img class="det-bex-icon" src="icons/ds.png" alt=""></a></div>
+                    <div class="det-bex"><a class="det-bex-link" href="#sec4"><img class="det-bex-icon" src="icons/cs.png" alt=""></a></div>
+                </div>
+            </div>   
+        </div>
+    </div>
+     <!--r sec start-->
+     <footer>
+
+        <div class="f-cop">
+            <div class="cop-des">
+                <p>Copyrights@2024-DEC</p>
+                <p> ERU </p>
+    
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+
+        const targetPosition = targetElement.offsetTop;
+        const startPosition = window.pageYOffset;
+        const distance = targetPosition - startPosition;
+        const duration = 1000; // 1 second
+        let startTime = null;
+
+        function animation(currentTime) {
+          if (startTime === null) startTime = currentTime;
+
+          const timeElapsed = currentTime - startTime;
+          const run = ease(timeElapsed, startPosition, distance, duration);
+
+          window.scrollTo(0, run);
+
+          if (timeElapsed < duration) {
+            requestAnimationFrame(animation);
+          }
+        }
+
+        function ease(t, b, c, d) {
+          t /= d / 2;
+          if (t < 1) return c / 2 * t * t + b;
+          t--;
+          return -c / 2 * (t * (t - 2) - 1) + b;
+        }
+
+        requestAnimationFrame(animation);
+      });
+    });
+  </script>
+</html>

@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERU</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="all-sec-in.css">
+    <link rel="stylesheet" href="foot.css">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+        <!-- header -->
+                  <header class="header">
+                <div class="header-content">
+                    <a href="#" class="logo">ERU</a>
+                    <nav class="nav">
+                        <a href="index.html" class="nav-link" >Home</a>
+                        <a href="det.html" class="nav-link">More Information</a>
+                       
+                        <a href="login.html" class="nav-link">Join Us</a>
+                    </nav>
+                    
+                    <button class="mobile-menu-toggle"></button>
+                </div>
+            </header>
+            <style>
+                * {
+                    
+                    box-sizing: border-box;
+                }
+              
+                .header {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    padding: 20px 40px;
+                    background: linear-gradient(to right, rgba(0,0,0,0.3), rgba(0,0,0,0.5));
+                    backdrop-filter: blur(10px);
+                    transition: all 0.3s ease;
+                    z-index: 1000;
+                }
+                .header-content {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    text-align: center;
+                    max-width: 1200px;
+                    margin: 0 auto;
+                }
+                .logo {
+                    font-size: 24px;
+                    font-weight: bold;
+                    color: #fff;
+                    text-decoration: none;
+                    letter-spacing: 1px;
+                }
+                .nav {
+                    display: flex;
+                    text-align: center;
+                    gap: 30px;
+                }
+                .nav-link {
+                    color: #fff;
+                    text-decoration: none;
+                    text-align: center;
+                    font-size: 19px;
+                    position: relative;
+                    transition: 0.5s all;
+                }
+                .nav-link:hover{
+                    scale: 1.07;
+                }
+        
+               
+                
+                @media (max-width: 768px) {
+                    .nav, .cta-button {
+                        display: none;
+                    }
+                    .mobile-menu-toggle {
+                        display: block;
+                    }
+                    .nav.active {
+                        display: flex;
+                        flex-direction: column;
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        width: 100%;
+                        background: rgba(0,0,0,0.8);
+                        padding: 20px;
+                    }
+                    .nav.active .nav-link {
+                        padding: 10px 0;
+                    }
+                    .nav.active + .cta-button {
+                        display: inline-block;
+                        margin-top: 20px;
+                    }
+                }
+                .header.scrolled {
+                    padding: 10px 40px;
+                    background: rgba(0,0,0,0.8);
+                }
+                .content {
+                    padding: 40px;
+                    height: 200vh;
+                }
+            </style>
+            <script>
+                const header = document.querySelector('.header');
+                const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+                const nav = document.querySelector('.nav');
+        
+                window.addEventListener('scroll', () => {
+                    header.classList.toggle('scrolled', window.scrollY > 50);
+                });
+        
+                mobileMenuToggle.addEventListener('click', () => {
+                    nav.classList.toggle('active');
+                });
+            </script>
+
+    <!-- slider -->
+
+    <div class="slider">
+        <!-- list Items -->
+        <div class="list">
+            <div class="item active">
+                <img src="cyber sec.jpg">
+                <div class="content">
+                    <p>1st section</p>
+                    <h2><a href="#cy" style="color: #ececec;">Cyber Security</a></h2>
+                    <p>
+                        Cybersecurity is the practice of protecting systems, networks, and data from cyber threats such as unauthorized access, attacks, or damage.
+                         It involves implementing measures like encryption, firewalls, and threat detection to ensure digital safety and resilience.
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="ai.jpg">
+                <div class="content">
+                    <p>2nd section</p>
+                    <h2><a href="#ai" style="color: #ececec;">Artificial Intelligence</a></h2>
+                    <p>
+                        Artificial Intelligence (AI) is the simulation of human intelligence in machines programmed to think, learn, and solve problems.
+                        It powers advancements in fields like healthcare, robotics, and data analysis, transforming industries worldwide.
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="software.jpg">
+                <div class="content">
+                    <p>3rd section</p>
+                    <h2><a href="#soft" style="color: #ececec;">Software Engineering</a></h2>
+                    <p>
+                        Software engineering is the systematic application of engineering principles to design, develop, test, and maintain software systems.
+                        It ensures reliability, efficiency, and scalability in software solutions for diverse applications.
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="data science.jpg">
+                <div class="content">
+                    <p>4th section</p>
+                    <h2><a href="#data" style="color: #ececec;">Data Science</a></h2>
+                    <p>
+                        Data science is an interdisciplinary field that combines statistics, programming, and domain expertise to extract insights and knowledge from structured and unstructured data. 
+                        It enables data-driven decision-making in industries like finance, healthcare, and technology.
+                    </p>
+                </div>
+            </div>
+ 
+            </div>
+        </div>
+        <!-- button arrows -->
+        <div class="arrows">
+            <button id="prev"><</button>
+            <button id="next">></button>
+        </div>
+        <!-- thumbnail -->
+        <div class="thumbnail">
+            <div class="item active">
+                <img src="cyber sec.jpg">
+                <div class="content">
+                    cyber security
+                </div>
+            </div>
+            <div class="item">
+                <img src="ai.jpg">
+                <div class="content">
+                    artificial intelligence
+                </div>
+            </div>
+            <div class="item">
+                <img src="software.jpg">
+                <div class="content">
+                    software engineering
+                </div>
+            </div>
+            <div class="item">
+                <img src="data science.jpg">
+                <div class="content">
+                    data science
+                </div>
+            </div>
+           
+            </div>
+        </div>
+    </div>
+
+
+    <script src="app.js"></script>
+<!--slider end -->
+
+ <!--sec 1 start-->
+ <div id="ai" class="cont-3">
+    <div class="main-box-4">
+       <div class="up-4">
+        <div class="up-left">
+            <div class="titles-box">
+                <div class="ttt">Facility <p class="line">&#8213;&#8213;&#8213;&#8213;&#8213;&#8213;&#8213;&#8213;&#8213;&#8213;&#8213;&#8213;&#8213;</div>
+                <div class="title">ARTIFFICIAL INTELLEGENS</div>
+            </div>
+        </div>
+        <div class="up-right">
+            <div class="titles-box-2">
+                <div class="sub-title-4"> include :</div>
+                <div class="text-right"> AI enables systems to perform tasks like problem-solving, decision-making, and creativity.<br>
+                    It includes narrow AI (task-specific) and general AI (human-like, still developing).<br>
+                    AI powers facial recognition, autonomous vehicles, and virtual assistants, transforming industries through automation and analytics.
+                    While challenges like privacy, bias, and job loss require ethical solutions, AI's potential to reshape technology and improve lives is unmatched
+                    <div class="btn-box"><a href="det.html"><button class="btn">Read More</button></a></div> 
+                </div>
+                
+                
+            </div>
+        </div>
+        
+       
+        </div>
+        <div class="down-4">
+            <div class="img-box-4"><img class="img-4" src="images_sections/ai-1.jpg" alt=""></div>
+            <div class="img-box-4"><img class="img-4" src="images_sections/ai-2.jpg" alt=""></div>
+            <div class="img-box-4"><img class="img-4" src="images_sections/ai-3.jpg" alt=""></div>
+    </div>
+    </div>
+</div>
+<!--sec 1 end-->
+
+
+
+<!--sec 2 start-->
+<div id="soft" class="cont-3">
+    <div class="main-box-3">
+       
+        <div class="right-3">
+            <div class="text-box">
+                <div class="ttt"> Facility <p class="line">&#8213;&#8213;&#8213;&#8213;&#8213;&#8213;&#8213;&#8213;&#8213;&#8213;&#8213;&#8213;&#8213;</p></div>
+                <div class="title">Software Engineering</div>
+                <div class="sub-title">
+                    include :
+                </div>
+                <div class="text">
+                    Software engineering develops, and maintains reliable,<br>
+                    
+                     and efficient software systems. It follows systematic<br>
+                    
+                    processes like the SDLC, covering phases such as testing,<br>
+                   
+                    and implementation. Agile and DevOps emphasize collaboration, cloud computing. This creative<br>
+                    include: <br>
+                    <ul>
+                      <li>Key methodologies: Agile, DevOps</li>
+                      <li>Important phases: Design, Testing, Deployment</li>
+                      <li>Core challenges: Scalability, Efficiency</li>
+                    </ul>
+                    <br>
+                    field demands problem-solving and innovation to meet<br>
+                    
+                    the rising need for robust systems.<br>
+                   
+                </div>
+                <div class="btn-box"><a href="det.html"><button class="btn">Read More</button></a></div>                    </div>
+            </div>
+    
+        <div class="left-3">
+            <div class="image-box-3">
+                <img class="image-3" src="images_sections/software-eng.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<!--sec 2 end-->
+
+
+
+<!--sec 3 start-->
+<div id="data" class="cont-3">
+    <div class="main-box-3">
+        <div class="left-3">
+            <div class="image-box-3">
+                <img class="image-3" src="images_sections/data sc.jpg" alt="">
+            </div>
+        </div>
+        <div class="right-3">
+            <div class="text-box">
+                <div class="ttt"> Facility <p class="line">&#8213;&#8213;&#8213;&#8213;&#8213;&#8213;&#8213;&#8213;&#8213;&#8213;&#8213;&#8213;&#8213;</p></div>
+                <div class="title">Data Scince</div>
+                <div class="sub-title">
+                    include :
+                </div>
+                <div class="text">
+                    Data science extracts actionable insights<br>
+                    from raw data using statistics, programming,<br>
+                    finance, retail, and IoT, optimizing<br>
+                   
+                    industries.<br>
+                    <ul>
+                      <li>Key tools: Python, Machine Learning</li>
+                      <li>Popular applications: Healthcare, Retail</li>
+                      <li>Challenges: Privacy, Data Volume</li>
+                    </ul>
+                    <br>
+                     decisions and uncovering important<br>
+                    trends. Challenges include managing<br>
+                    Data science fosters innovation and<br>
+                    decision-making in numerous sectors.<br>
+                </div>
+                <div class="btn-box"><a href="det.html"><button class="btn">Read More</button></a></div>                    </div>
+            </div>
+        
+        
+    </div>
+</div>
+<!--sec 3 end-->
+
+
+
+<!--sec 4 start-->
+<div id="cy" class="ccomnt">
+    <div class="cont">
+        <div class="left">
+            <div class="row-1">
+                <div class="text-box">
+                    <div class="ttt"> Facility <p class="line">&#8213;&#8213;&#8213;&#8213;&#8213;</p></div>
+                    <div class="title">CYBER SECURITY</div>
+                    <div class="sub-title">
+                        include :
+                    </div>
+                    <div class="text">
+                        Cybersecurity is essential for safeguarding digital <br> assets and critical infrastructure <br> from cyber threats like malware and data breaches. <br>
+                       <li class="text">
+                        Cybersecurity is essential for safeguarding <br> digital assets and critical infrastructure from cyber threats <br> like malware and data breaches.
+                       </li>
+                    </div>
+                    <div class="btn-box"><a href="det.html"><button class="btn">Read More</button></a></div>                    </div>
+            </div>
+            <div class="row-2">
+                <div class="row-2-box">
+                        <div class="bex"><a href=""><img class="icon-bg" src="icons/home.png" alt=""></a></div>
+                        <div class="bex"><a href="https://eru.edu.eg/faculty-of-artificial-intelligence/"><img class="icon-bg" src="icons/fac.png" alt=""></a></div>
+                        <div class="bex"><a href="https://eru.edu.eg/"><img class="icon-bg" src="icons/cll.png" alt=""></a></div>
+                        <div class="bex"><a href="https://admission.eru.edu.eg/DefaultApplicant.aspx"><img class="icon-bg" src="icons/cont.png" alt=""></a></div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="img-box">
+                <img class="imag" src="images_sections/cyber-security.png" alt="">
+            </div>
+            <div class="img-box">
+                <img class="imag" src="images_sections/cyber-security-2.png" alt="">
+            </div>
+            <div class="red-box"></div>
+        </div>
+    </div>
+    </div>
+<!--sec 4 end-->
+<footer>
+
+    <div class="f-cop">
+        <div class="cop-des">
+            <p>Copyrights@2024-DEC</p>
+            <p> ERU </p>
+
+        </div>
+    </div>
+</footer>
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+
+        const targetPosition = targetElement.offsetTop;
+        const startPosition = window.pageYOffset;
+        const distance = targetPosition - startPosition;
+        const duration = 1000; // 1 second
+        let startTime = null;
+
+        function animation(currentTime) {
+          if (startTime === null) startTime = currentTime;
+
+          const timeElapsed = currentTime - startTime;
+          const run = ease(timeElapsed, startPosition, distance, duration);
+
+          window.scrollTo(0, run);
+
+          if (timeElapsed < duration) {
+            requestAnimationFrame(animation);
+          }
+        }
+
+        function ease(t, b, c, d) {
+          t /= d / 2;
+          if (t < 1) return c / 2 * t * t + b;
+          t--;
+          return -c / 2 * (t * (t - 2) - 1) + b;
+        }
+
+        requestAnimationFrame(animation);
+      });
+    });
+  </script>
+</body>
+</html>

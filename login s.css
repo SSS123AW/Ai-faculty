@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    background-color: #121212;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+.container {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 400px;
+}
+.tabs {
+    display: flex;
+}
+.tab {
+    background-color: #2a2a2a;
+    color: #ffffff;
+    flex: 1;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+.tab:hover {
+    background-color: #3a3a3a;
+}
+.tab:target,
+#login:target ~ .tabs .login-tab,
+#signup:not(:target) ~ .tabs .login-tab {
+    background-color: #ff0000;
+}
+.form-container {
+    padding: 30px;
+}
+.form-container > div {
+    display: none;
+}
+#login:target ~ .form-container .login-form,
+#signup:target ~ .form-container .signup-form,
+#login:not(:target) ~ #signup:not(:target) ~ .form-container .login-form {
+    display: block;
+}
+h2 {
+    color: #ff0000;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.input-group {
+    margin-bottom: 20px;
+}
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+.input-group input {
+    background-color: #2a2a2a;
+    border: 1px solid #3a3a3a;
+    border-radius: 4px;
+    color: #ffffff;
+    display: block;
+    padding: 10px;
+    width: 100%;
+}
+.input-group input:focus {
+    border-color: #ff0000;
+    outline: none;
+}
+button {
+    background-color: #ff0000;
+    border: none;
+    border-radius: 4px;
+    color: #ffffff;
+    cursor: pointer;
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+button:hover {
+    background-color: #cc0000;
+}
+@media (max-width: 480px) {
+    .container {
+        max-width: 100%;
+    }
+}
